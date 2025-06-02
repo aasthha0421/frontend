@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello, its a bg changer</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    //generate a random color
+
+const randomColor = function () {
+  const hex = '0123456789ABCDEF';
+// It’s a string of all possible digits 
+// and letters used in a hexadecimal color code – that #FF5733 vibe? Yeah, it comes from this gang.
+  let color = '#';
+//   Starting our color code with # because every proper hex color starts with a hashtag
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+// generating a random number between 0 and 15,
+  }
+  return color;
+};
+
+let intervalId;
+const startChangingColor = function () {
+  if (!intervalId) {
+//     The ! means “not”. It flips the truth value.
+// intervalId is where we store the ID that setInterval gives us — kind of like a party ticket 🎟️.
+// When the page loads, intervalId is undefined — which is a falsy value in JavaScript.
+// So !intervalId is true (because undefined is falsy), and that means:
+// 🟢 "YES, we're allowed to start the party!" (i.e., setInterval)
+// BUT if the party is already going on (like intervalId has a value, e.g., 15), then:
+// 🔴 !intervalId becomes false
+// → and the if block won’t run again
+// → So no second setInterval is started 🙅‍♀️
+    intervalId = setInterval(changeBgColor, 1000);
+// setInterval runs the changeBgColor function every 1000ms (aka every 1 second). 
+  }
+
+  function changeBgColor() {
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+const stopChangingColor = function () {
+  clearInterval(intervalId);
+  intervalId = null;
+//   flushes out the previous value of intervalid
+};
+
+document.querySelector('#start').addEventListener('click', startChangingColor);
+
+document.querySelector('#stop').addEventListener('click', stopChangingColor);
+// And this is the “Stop” button’s job – “If someone clicks you, shut it all down
+
+</script>
+</html>
+
+
+<!-- how loop is working
+ First round (i = 0):
+Math.random() generates something like 0.42 (a random decimal between 0 and 1).
+
+Multiply by 16 → 0.42 * 16 = 6.72
+
+Math.floor(6.72) becomes 6 (we round it down).
+
+So hex[6] = '6'
+
+That gets added to color, which becomes: '#6'
+
+💃 Second round (i = 1):
+Say we get 0.9 * 16 = 14.4 → floor = 14
+
+hex[14] = 'E'
+
+Color becomes '#6E' -->

@@ -1,0 +1,55 @@
+p {
+    text-align: center;
+    text-decoration: underline ;
+}
+/* you can use left or right too */
+/* we can use start or end too in place of right or left */
+h1 {
+    text-align:center;
+    text-decoration:line-through;
+    /* we can use underline, overline, line through */
+}
+#second{
+text-decoration: none;
+}
+a{
+    text-decoration: red wavy underline;
+}
+/* u can make dotted lines too  */
+#h1{
+    font-weight: normal;
+}
+#h2{
+    font-weight: bolder;
+}
+#h3{
+    font-weight: 550 ;
+}
+#h4{
+    font-weight: 100;
+}
+/* above 400 is bold and ranger is 100-900 */
+#one{
+    font-family: Arial;
+}
+/* sometimes we use multiple families if one doesnt work, other will
+its called FALLBACK MECHANISM
+becoz everyone use different browser sometimes some browser doesnt support that font style so 
+we keep options */
+#two{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+#first {
+    font-size: 30px;
+}
+#firsttwo {
+    font-size: 25px;
+    line-height: 2px;
+}
+/* texts overlap each other  becoz single line has height of 2px*/
+#firstthree {
+    font-size: 25px;
+   text-transform: capitalize;
+}
+/* we can use uppercase, none and lowercase too */
+/*  we use universal selector " * " at the start of code when we want same change in all the text */

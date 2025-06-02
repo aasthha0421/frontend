@@ -1,0 +1,58 @@
+#practice {
+    height: 200px;
+    background-color: blueviolet;
+    width: 200px;
+    border-width: 5px;
+    border-style: dotted;
+    border-color: beige;
+    text-align: center;
+    border-radius: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 50px;
+}
+/* we can see its height by using inspect and by using different background color
+we will know its height and by using height property we can change height of our content
+according to our needs 
+text align ka mtlb hota h jitni space di gyi h uske according center ya right/left me aana
+not ki poore page ke according
+AGAR HAME SAARI BORDER PROPERTIES EK SAATH CHAHIYE THEN WE USE*/
+/* to get the round shape edges or border , we use BORDER RADIUS, IT CAN BE 
+WRITTEN USING PIXEL OR PERCENTAGE 
+TO GET A CIRCLE JUST WRITE 50% OF HEIGHT AND WIDTH WHICH IS EQUAL*/
+h1 {
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    border: 5px dashed deeppink;
+    border-radius: 50%;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    margin-top: 50px;
+}
+/*  to give padding to all the sides at once
+WE USE CLOCKWISE DIRECTION, WRITE THEM ALL TOGETHER
+MENTIONED IN ABOVE EXAMPLE, FIRST VALUE IS TOP, RIGHT, BOTTOM. THEN LEFT 
+MARGIN BORDER KE BHAR AATI H AND PADDING BORDER KE ANDRRR
+MARGIN 2 ELEMENTS KE BEECH ME SPACE DETA H BUT PADDING ELEMENT OR USKE BORDER ME SPACE DETA H
+margin 2 elements ke border se space deta h*/
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+#navbar {
+    height: 60px;
+    background-color: black;
+}
+button {
+    background-color: #f08804;
+}
+#logo {
+    color: #f08804;
+    font-size: 25px;
+}
+a {
+    margin-right: 200px;
+    text-decoration: none;
+}

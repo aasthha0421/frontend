@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    this is imp
+    0	UNSENT	Client has been created. open() not called yet.
+    1	OPENED	open() has been called.
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	Downloading; responseText holds partial data.
+    4	DONE	The operation is complete.
+
+    <div class="card" id="profileCard">
+        <!-- Info will come here through JavaScript -->
+      </div>
+
+<!-- Yes, console.log is a developer tool because it helps developers debug and understand how their code works.  -->
+   <script  >
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            console.log(data);
+            console.log(typeof data);
+            console.log(data.followers);
+             // Extract needed data
+        const avatarUrl = data.avatar_url;
+        const followers = data.followers;
+        const name = data.name;
+
+        // Create the HTML content
+        const cardHTML = `
+          <img class="avatar" src="${avatarUrl}" alt="Profile Picture" />
+          <div class="name">${name}</div>
+          <div class="followers">👥 Followers: ${followers}</div>
+        `;
+
+        // Inject into the card div
+        document.getElementById('profileCard').innerHTML = cardHTML;
+      }
+        
+    }
+    xhr.send();
+   </script> 
+</body>
+</html>
+<!-- ajax
+ a- asynchoronous
+ j-javascript
+ a-and
+ x-xml (extensible markup language)
+ 
+ API is an endpoint that i can request, it responds back data in a format called JSON
+
+ json is a data format made for other computers to consume. JSON stands for java script object notation, it just
+ sends data from me to u or api to browser
+ 
+ API is a portal into different application or a different database
+ they expose endpoints & these endpoints are going to respond with info for code to consume or
+ other software to consume
+ 
+ AJAX is the method that sends asynchronous requests to a server.
+API is the server-side interface that receives the AJAX requests and sends back data.
+JSON is often the format in which data is exchanged between the client and server during this process-->

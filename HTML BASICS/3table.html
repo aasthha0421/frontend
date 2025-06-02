@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <ul>
+            <li> APPLE</li>
+            <ul>
+                <li>season-winters</li>
+                <li>color-red</li>
+            </ul>
+            <li> MANGO</li>
+            <ul>
+                <li>season-summer</li>
+                <li>color-yellow</li>
+            </ul>
+            <li> LITCHI</li>
+            <ul>
+                <li>season-autumn</li>
+                <li>color-pink</li>
+            </ul>
+        </ul>
+        <ol>
+            <li> APPLE</li>
+            <ol>
+                <li>season-winters</li>
+                <li>color-red</li>
+            </ol>
+            <li> MANGO</li>
+            <ol>
+                <li>season-summer</li>
+                <li>color-yellow</li>
+            </ol>
+            <li> LITCHI</li>
+            <ol>
+                <li>season-autumn</li>
+                <li>color-pink</li>
+            </ol>
+        </ol>
+        <hr>
+        <!-- now we are making a table -->
+        <table>  
+        <thead>
+        <caption>STUDENT INFO</caption>
+         <tr>
+            <!--  tr indicate row -->
+            <th>
+            <!-- used for table heading --> 
+            NAME
+            </th>
+            <!-- for new column, use new th -->
+            <th>
+            ROLL NO
+            </th>
+         </tr>
+        </thead>
+        <!-- now we writing data in those columns and rows -->
+        <tbody>
+         <tr><td>AASTHA</td>
+            <td> 360 </td>
+         </tr>
+        </tbody>
+        </table>
+        <!-- we use table, table row, table head to create table now
+        now we use caption to give heading to table and always use this tag
+    after table tag at starting
+thead and tbody wrap heady and body but we can only see the changes by using inspect -->
+<hr>
+<table>  
+    <thead>
+    <caption>STUDENT INFO</caption>
+     <tr>
+        <th colspan="2">
+        INFORMATION
+        </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+        <td>
+            AASTHA
+            </th>
+            <td>
+            360
+            </td>
+         </tr>
+        </tbody>
+        </table>
+        <!-- when we need to merge two or more table blocks and give them the same name
+            we use colespan
+        and we used number2 becoz we needed to merge two blocks of a table
+    and we need to put one title above both of them -->
+
+
+<hr>
+<hr>
+    <!-- lets make another table -->
+     <table border="2px" width="50%" cellspacing="8px" bgcolor="pink" align="center">
+        <!-- LETA MAKE a row just for headings -->
+        <tr align="center"> <th>NAME</th>
+            <th>CLASS</th>   
+            <th>ROLL NO</th></tr>
+        <!-- to align data of row, use align in tr tag -->
+<!-- now let make another row to fill the data-->
+ <tr> <td>ASH</td>
+    <td>12th</td>
+    <td>1</td></tr>
+     </table>
+    </main>
+</body>
+<!-- tables ke cells ke beech me space dena ho toh use cellspacing
+ cell border or uske content ke beech me space dena ho toh use cellpadding -->
+</html>

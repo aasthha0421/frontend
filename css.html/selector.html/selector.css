@@ -1,0 +1,23 @@
+* {
+    color:brown;               
+}
+/* universal selector i.e asterisk with curly brackets */
+h1 {
+      color:pink;
+}
+button {
+    color:lavender;
+}
+#headingOne {
+    color:magenta;
+}
+#headingTwo {
+    color:yellow;
+}
+.MyClass {
+    color:yellowgreen;
+}
+#box {
+    background-color:blue;
+    color:white
+}

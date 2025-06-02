@@ -1,0 +1,39 @@
+h3 {
+    color:brown
+}
+p {
+   color:purple
+}
+button {
+    background-color:green
+}
+body{
+    background-color: orange;
+}
+h4{
+    color:#ff0000
+}
+/* using universal selector with pseudo elements */
+*, *::before, *::after {
+    box-sizing: border-box;
+    /* box-sizing: border-box;: Ensures that padding and borders are included in the element’s width and height, which helps avoid layout issues. */
+    margin: 0;
+    padding: 0;
+}
+/* *::before:
+
+Targets the ::before pseudo-element of all elements.
+Pseudo-elements like ::before let you add content or styling before an element’s actual content.
+*::after:
+
+Targets the ::after pseudo-element of all elements.
+You can add content or styles after an element’s actual content. */
+.example::before {
+    content: "Hi ";
+    color: red;
+}
+
+.example::after {
+    content: " World!";
+    color: blue;
+}

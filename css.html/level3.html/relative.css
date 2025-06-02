@@ -1,0 +1,68 @@
+#box1 {
+    
+        height: 200px;
+        width: 200px;
+        background-color: green;
+        font-size: 25px;
+}
+#box2 {
+    height: 50px;
+    width: 50%;
+    background-color: yellow;
+    font-size: 2em;
+    /* it means 2 times of parent's font size so that is 2*25=50 */
+    width: 2em;
+    /* 2 into font sizee of child box that is 50*2=100 */
+}
+/*  here 50% percent shows ki box2 ne 50% width leliya h box1 se, becoz box1
+parent h */
+#box3 {
+    width: 2rem;
+    /*  2*26 becoz width given by root element that is body is 26 */
+    background-color: pink;
+    height: 25px;
+}
+/* in rem, it tells us the width/ font size of root element like html means
+agar koi bhi text likha ho without tag, usko koi width and height miljati h according to
+body tag, so wahi given width and height multiplied by 2 */
+.box {
+     display: inline-block;
+     height: 100px;
+     width: 100px;
+}
+#one {
+    position: static;
+    /*  koi change nhi aata static se, becoz by default hr element ki position phle se static hoti h */
+    background-color: brown;
+    background-image: url(photo.avif);
+    background-size: cover;
+    /* ye background image set krne ke bd , we have to set its size too by using auto,cover
+    or contain(contain use krne pr picture choti dikhayi deti h and it can repeat too agar
+    wohh given space fill nhi kr paya toh and iss repeat ko remove krne ke liye use background repeat to
+    none , thats why prefer cover*/
+}
+#two {
+    position: relative;
+    top: 20px;
+    background-color: blue;
+    z-index: 1;
+}
+#three {
+    position: absolute;
+    bottom: 20px;
+    background-color: green;
+    left: 40px;
+    z-index: -2;
+}
+/* absolute memreausrement according to closest ancestor ya parent se hoti h, for ex; div tag ka parent
+body tag, so ab body tag se woh 20px dur hoga bottom se */
+#four {
+    position: fixed;
+    right: 10px;
+    background-color: pink;
+    top: 0px;
+    /*  top pr fix krne ke bd ye hoga, jb bhi ham apge ko scroll bhi krenge na,
+    ye box4 dikhta h rahega top pr fixx ekdm */
+}
+/* fixed ka measurement browser ke according hota h, mtlb ab woh right se 20px dur hoga , fixed property
+use krne se wohh scroll hone pr bhi fix rehta h*/

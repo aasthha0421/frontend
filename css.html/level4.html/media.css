@@ -1,0 +1,96 @@
+body{
+    height: 100%;
+}
+div{
+    height: 500px;
+    width: 400px;
+    background-color: brown;
+    transition-property: all;
+    /* jo bhi property ka transition chahiye or jis property me change chahiye */
+    transition-duration: 2s;
+    transition-timing-function: steps(5);
+    /* ab ye 5steps me transition krega and if u want to learn more about
+    timing function? search it and then go to mdn */
+    transition-delay: 1s;
+    /* 1s ke bd transition aana shuru hoga */
+
+
+    /* transform: rotate(90deg); ye hamne COMMENT OUT kra h taki dusri properties use kr sake */
+
+
+    /*  rotate: x 90deg bhi likh skte h , we can replace x with y or z , but 90deg for x and y axis are
+    not visible kyunki unki height zero hojati h uss time but for z axis 90deg is possible */
+    animation: colorAnimate 2s ease-in 1s infinite normal ;
+}
+@media (min-width: 500px) and (max-width: 800px){
+div{
+    background-color: purple;
+}
+}
+/* agar screen ki width minimum 500px and max 800px hogi tb background color change hoga */
+@keyframes colorAnimate {
+    /* from{background-color: brown;}
+    to{background-color: yellow;} */
+    0%{background-color: brown;}
+    50%{background-color: black;}
+    100%{background-color: yellow;}
+    /* when we have to change beech me koi stage, tb we use percentage otherwise from to wala
+    method hi */
+}
+.container:hover{
+    background-color: palevioletred;
+    font-size: 50px;
+    transform: scale(0.5);
+    /* isse size bda ya chota hota h , less than 1 : small sizee but more than 1: phle se bhi bda*/
+    transform: translateX(50px);
+    /* move krwana x direction me an agar -20px likhte toh ye x axis ke opposite direction jata */
+}
+/* hover use krne pr jse hi cursor uss div ya class pr touch krega, change apne
+ap dikhayi dega */
+.container:active{
+    background-color: blue;
+    font-size: 100px;
+}
+/* active use krne pr jse hi ham cursor se uss div ya class pr click krenge, change apne
+ap dikhayi dega */
+.loader{
+    margin-top: 50px;
+height: 300px;
+    width: 300px;
+    border: 15px solid black;
+    border-radius: 50%;
+    border-top: 15px solid red;
+   animation: spin 1s linear 0s infinite normal;
+   /* 1s is faster than 2s */
+}
+@keyframes spin{
+    from{ transform: rotate(0deg);}
+    from{ transform: rotate(360deg);}
+}
+/* min width=500px means minimun 500 hogi ya usse zyda tb hoga change
+but max-width mein zyda se zyda 500 honi chahiye and usse kam , then dikhega chnange 
+
+
+for making screen responsive for mobile, use min width
+for making screen responsive for desktop, use max width
+
+
+use 6 break points to make a responsive website in mobile version
+@media (min-width: 475px)  for extra small screen   
+@media (min-width: 640px)  for small screen
+@media (min-width: 768px) for medium screen
+@media (min-width: 1024px) for large screen
+@media (min-width: 1280px)  for extra large screen
+@media (min-width: 1536px)  for extra extra large screen, this make our container shrink
+when viewport touches it
+for desktop use max-width and reverse order of mobile version media
+
+
+use container utility class for responsive
+.container{
+width:100%;   for desktop use max-width:1536px;
+margin-left:auto;   dont set it to zero as we will not able to change it later
+margin-right:auto;
+padding-left:0.5rem;
+padding-right:0.5rem;
+}*/

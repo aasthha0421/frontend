@@ -1,0 +1,41 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+/* using universal selector, and always set padding and margin to zero at starting */
+#navbar {
+    background-color: black;
+    height: 60px;
+}
+a {
+    margin-right:  150px;
+    color: white;
+    text-decoration: none;
+}
+#logo {
+    color: #f08804;
+    font-size: 25px;
+}
+/* input wahi h jo dikhta h website pr */
+button {
+    color:white;
+    background-color: #f08804;
+}
+/* margin- two elements ke beech me space create krta h
+padding-ek element or uske border ke beech me soace create krta h */
+.contentbox {
+    height: 100px;
+    width: 100px;
+    border: 2px black solid;
+    display: inline-block;
+}
+#content {
+    height: 450px;
+}
+/*  use kra display ko taki saree box ek line me aajaye 
+and for class we use . in css*/
+footer {
+    color:white;
+    background-color:black;
+    text-align: center;
+}

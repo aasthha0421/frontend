@@ -1,0 +1,29 @@
+div{
+    background-color: aqua;
+    display: inline-block;
+    /* inline krne ke bd ye block elements act krenge inline jse, bs utni space lenge 
+    jitna inhe chahiye */
+}
+button{
+    background-color: blue;
+}
+#box1{
+      height: 100px;
+      width: 100px;
+      padding: 25px;
+      margin: 25px;
+
+}
+#box3{
+    height: 100px;
+    width: 100px;
+    padding: 25px;
+    margin: 25px;
+}
+#box2{
+    height: 100px;
+    width: 100px;
+    padding: 25px;
+    margin: 25px;
+
+}

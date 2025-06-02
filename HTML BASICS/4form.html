@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- FORM IS USED TO COLLECT DATA FROM USER
+    EX;LOGIN/SIGNUP
+ACTION TAG- checks or processes the data entered by user, php is a backend language 
+we wrote password in place of text so that our password while we write stay hidden 
+for security purposes-->
+        <form action="/action.php">
+            <h3> REGISTRATION FORM</h3>
+            <input type="radio" value="CLASS X" name="class">CLASS X
+            <br><br>
+            <input type="radio" value="CLASS XII" name="class">CLASS XII
+            <br><br>
+
+            <input type="text" placeholder="username">
+            <br><br>
+            <input type="password" placeholder="password">
+            <br><br>
+        
+         <!-- RADIO buttons helps in choosing one option instead of multiple
+        label tag helps in telling user what need to be filled in that particular box or column
+    and it uses radio buttons
+value tells the backedn which class we have chosen but the user see name i.e class X thats why 
+value and name should be in sync-->
+    <h5>SELECT YOUR CLASS</h5>
+    <label for="101">
+        <input type="radio" value="CLASS X" name="class" id="101">CLASS 
+    </label>
+    <br><br>
+    <label for="102">
+    <input type="radio" value="CLASS XII" name="class" id="102">CLASS XII
+</label>
+<!-- by using label tag, we can choose an option by clicking on a the text
+checkbox is used for choosing multiple options -->
+    <hr>
+    <h5>SELECT YOUR FAV SUBJECT</h5>
+    <label for="101">
+        <input type="checkbox" value="maths" name="SUBJECT" id="101">MATHS
+    </label>
+    <br><br>
+    <label for="102">
+        <input type="checkbox" value="physics" name="SUBJECT" id="102">PHYSICS
+    </label>
+    <br><br>
+    <label for="101">
+        <input type="checkbox" value="chemistry" name="SUBJECT" id="103">CHEMISTRY
+    </label>
+    <br><br>
+    <label for="101">
+        <input type="checkbox" value="biology" name="SUBJECT" id="104">BIOLOGY
+    </label>
+    <br><br>
+    <label for="101">
+        <input type="checkbox" value="english" name="SUBJECT" id="105">ENGLISH
+    </label>
+    <hr>
+    <h5> SELECT YOUR CITY</h5>
+    <select name="city">
+        <option value="DELHI">DELHI</option>
+        <option value="MUMBAI">MUMBAI</option>
+        <option value="UTTAR PRADESH">UTTAR PRADESH</option>
+        <option value="UTTARAKHAND">UTTARAKHAND</option>
+        <option value="TAMIL NADU">TAMIL NADU</option>
+    </select>
+    <!-- select is used for selecting city or town -->
+    <hr>
+    <textarea name="feedback" id="101" placeholder="please write your feedback here" rows="5"
+    colums="5">FEEDBACK</textarea>
+    <!-- textarea is used for feedback or comments -->
+    <hr>
+    <input type="submit" value="submit">
+</form>
+<hr>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HcOc7P5BMi4?si=AdNBxe5xoVS--aUd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<hr>
+        <iframe width="560" height="315" src="https://www.wikipedia.org"></iframe> 
+        <!-- iframe is used to put a website inside ur website
+        search a video on youtube-click on share-then embeeded otion-copy the html code-
+    then write it here -->
+    <hr>
+    <video width="560" height="315" src="/HELLO FOLDER/myvideo.mp4" controls loop>my video</video>
+    <!--  but this video will not open/run 
+    controls will helps in running the video so now video will work
+loop will the video run continously or in loop
+we can also use AUTOPLAY instead of loop , it will video play as soon as u open link
+but user doesnt like this option sometimes so we dont use it -->
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!-- relative unit for ex; percentage, in same website % can be different for div or button
+ but in absolute unit, ex; pix it stays same for every one -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="relative.css">
+ </head>
+ <body>
+   <!-- iss hello ki automatic width h 26px -->
+   hello
+   <!-- % it defines a size as relative to an elements's parent object
+  for ex; div ke andr ek or div h, so phle wala is div is parent
+  and agr hamne child div ko width 33%dena h toh, woh parent div ki 100% width se milega-->  
+    <div id="box1">
+    <div id="box2">box2</div>
+    <div id="box3">box3</div>
+    box1
+    </div>
+    <!-- next relative unit is "em", it is used for typing properties like font size
+     then other unit is "rem"
+     then we have "viewport height" in this jitni hamari screen ya browser ke measurement
+     honge uske according kam hoga, fox ex, box2 has width;2vw it will have 2percent
+     of browser's width  and if box2 has height; 2vh it will have the 2percent of 
+     browser's height-->
+<br>
+<h1>position playground</h1>
+<!--  now lets talk about how to arrange an element's position in an document -->
+     <div class="box" id="one">one</div>
+     <div class="box" id="two">two</div>
+     <!-- setting background image using  "UNSPLASH" , we move download image to our 
+      css folder and its already present in vs too-->
+     <div class="box" id="three">three</div>
+     <div class="box" id="four">four</div>
+     <!-- there are more properties in position like bottom,top, right, left, zindex
+      and these properties doesnt work for static position 
+      difference between fixed and sticky is
+      starting se end tk fixed wala show hoga, agr ham scroll kre tb bhi
+      but sticky wala ek position pr hoga and until and unless ham uss position tk nhi
+      pauhchte, kuch nhi hota......ek br uss position tk pahuchne ke bd, woh sticky bhi
+      fixed hojata h end tk-->
+ </body>
+ </html>
+ <!--  last property z index, ye help krta h decide krne me ki konsa element
+   overlap krega kisko, we can give elements values like 1 or 2 taki unki priorities
+   baddh jaye for ex; -1 wala ko overlap krega 0value wala element then
+   0 value wale element ko overlap krega 1 value wala -->

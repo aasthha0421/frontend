@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .hide{
+        display: none;   
+        /* USED FOR EVENT BUBBLING */
+    }
+</style>
+<body>
+    <h1>hello</h1>
+    <input type="text">
+   
+
+    <h2>my form</h2>
+    <form action="/shelter" id="shelterform">       
+    <!-- where we want to send our form to , its like a site, we use backend for it
+we already know shlter desont exists so when we submit our data, webpage will show ur page cant be processed
+thats why we use event.preventdefault-->
+    <input id="new" type="text">
+    <button>submit</button>
+    <ul id="cats">available cat name
+    </ul>
+</form>
+<div class="" id="container">this is a button
+<button id="this">HELLO CLICK ME</button>
+</div>
+<br>
+<!-- NOW EVENT DELEGATION -->
+<form action="/tweet" id="tweetform">       
+ <input type="text" id="eventinfo">
+ <button id="events">submit the info</button>
+ <ul id="eventlist">
+    <li>this is a list</li>
+ </ul>
+</form>
+    <script src="async.js"></script>
+</body>
+</html>
