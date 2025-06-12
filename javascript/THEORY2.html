@@ -47,3 +47,58 @@ setTimeout(greetBound, 1000); // Output: Hello, Aastha -->
 
 const sayHiBound = obj.sayHi.bind(obj);
 Boom. No more context drama. this is bound to obj, and it can’t run off anymore.
+
+
+
+<!--   Making a property non-writable or non-enumerable: -->
+
+  for better understanding read this article 
+  https://stackoverflow.com/questions/8312459/iterate-through-object-properties
+
+<!--   Okay bestie, let’s say you have an object in JavaScript — like your own cute diary. Normally, 
+you can read it, write in it, and even show it to others. 
+But what if you wanna lock a page so no one can write on it? Or you wanna hide a page so it doesn’t show up 
+when someone flips through? -->
+
+✨ That's where property descriptors come in! ✨
+
+Every property in an object has some secret settings (aka descriptors) like:
+
+Descriptor	What it does
+value	The actual value of the property (like the content on the diary page)
+writable	Can we change this value? (Yes/No)
+enumerable	Will this show up in a for...in or Object.keys() loop?
+configurable	Can we delete or change the descriptors?
+
+
+🔒 1. Make a property non-writable (you can't change its value)
+  let diary = {};
+Object.defineProperty(diary, 'secret', {
+  value: "I have a crush on JavaScript!",
+  writable: false
+});
+
+diary.secret = "Changed it!";
+console.log(diary.secret); // Still: "I have a crush on JavaScript!"
+
+🕵️ 2. Make a property non-enumerable (it won’t show up in loops)
+let diary = {};
+Object.defineProperty(diary, 'secret', {
+  value: "Shh! It's a secret!",
+  enumerable: false
+});
+
+console.log(Object.keys(diary)); // []
+for (let key in diary) console.log(key); // Nothing shows up!
+
+<!-- 📝 Formal Exam-Ready Version:
+✅ Property Descriptors in JavaScript:
+A Property Descriptor defines the characteristics of a property in an object. These include: -->
+
+value: The value associated with the property.
+writable: A Boolean indicating whether the value can be changed.
+enumerable: A Boolean indicating whether the property will appear during enumeration (like in for...in or Object.keys()).
+
+configurable: A Boolean indicating whether the property descriptor can be changed and if the property can be deleted.
+✅ How to Define or Modify Descriptors:
+We use the Object.defineProperty() method:
