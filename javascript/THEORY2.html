@@ -99,6 +99,43 @@ value: The value associated with the property.
 writable: A Boolean indicating whether the value can be changed.
 enumerable: A Boolean indicating whether the property will appear during enumeration (like in for...in or Object.keys()).
 
+
+Lexical scoping and Closure
+  Lexical scoping (also called static scoping) means the visibility of variables is determined by their physical placement in the source code. 
+  In JavaScript, a function can access variables defined within its scope and in any outer (parent) scopes where the function was defined. 
+  It cannot access variables from inner (child) scopes.
+<!--   NOW CODE -->
+  function outer() {
+  let outerVar = "I am outside!";
+  function inner() {
+    console.log(outerVar); // inner() can "see" outerVar
+  }
+  inner();
+}
+
+  ## Closure
+
+A closure is **a function that remembers and can access variables from outside its own scope, even after the outer function has finished executing**. 
+In JavaScript, when you return a function from another function, the returned function "closes over" the variables of the parent function, keeping them alive.
+
+<!-- **Example:** -->
+  function makeCounter() {
+  let count = 0;
+  return function() {
+    count++;
+    return count;
+  }
+}
+const counter = makeCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
+<!-- Here, the inner function returned by makeCounter forms a closure: it remembers the count variable, even though makeCounter has finished running. -->
+
+  **In short:**
+
+- **Lexical scope** decides where a variable is available in your code.
+- **Closures** let a function remember variables from its lexical scope, even after the scope is gone.
+
 configurable: A Boolean indicating whether the property descriptor can be changed and if the property can be deleted.
 ✅ How to Define or Modify Descriptors:
 We use the Object.defineProperty() method:
